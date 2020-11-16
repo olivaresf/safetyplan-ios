@@ -23,6 +23,7 @@
 		3FE1113324193EB3006D4099 /* GuideCopingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1113224193EB2006D4099 /* GuideCopingViewController.swift */; };
 		3FE1113824194154006D4099 /* GuideRecoveringViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1113624194154006D4099 /* GuideRecoveringViewContoller.swift */; };
 		3FE1113924194154006D4099 /* GuideSuicidePreventionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1113724194154006D4099 /* GuideSuicidePreventionViewController.swift */; };
+		9B84BC3A256252C500BAE49F /* SafetyPlanInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B84BC39256252C500BAE49F /* SafetyPlanInteractor.swift */; };
 		9C27D17D9D9204A2A7FC5552 /* Pods_Safety_PlanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB18F0A8CBBAD5BB3844FF21 /* Pods_Safety_PlanTests.framework */; };
 		A71A9D355BACCA526028E3D2 /* Pods_Safety_Plan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC79E336B06AA74EACC72F5 /* Pods_Safety_Plan.framework */; };
 		B83A47B52447F52F0030A8A4 /* DatabaseGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A47B42447F52F0030A8A4 /* DatabaseGateway.swift */; };
@@ -96,6 +97,7 @@
 		3FE1113624194154006D4099 /* GuideRecoveringViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideRecoveringViewContoller.swift; sourceTree = "<group>"; };
 		3FE1113724194154006D4099 /* GuideSuicidePreventionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideSuicidePreventionViewController.swift; sourceTree = "<group>"; };
 		5B0BC7487183D023877A322A /* Pods-Safety PlanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safety PlanTests.release.xcconfig"; path = "Target Support Files/Pods-Safety PlanTests/Pods-Safety PlanTests.release.xcconfig"; sourceTree = "<group>"; };
+		9B84BC39256252C500BAE49F /* SafetyPlanInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyPlanInteractor.swift; sourceTree = "<group>"; };
 		AB18F0A8CBBAD5BB3844FF21 /* Pods_Safety_PlanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Safety_PlanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC79E336B06AA74EACC72F5 /* Pods_Safety_Plan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Safety_Plan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B83A47B42447F52F0030A8A4 /* DatabaseGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseGateway.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			children = (
 				B8E38D4F2415C2A000729701 /* CrisisViewController.swift */,
 				B86A37772419B31B0011E0F0 /* SafetyPlanViewController.swift */,
+				9B84BC39256252C500BAE49F /* SafetyPlanInteractor.swift */,
 				2C67D9981B584FFA00C53652 /* SuicideSafetyPlanTabViewController.h */,
 				2C67D9991B584FFA00C53652 /* SuicideSafetyPlanTabViewController.m */,
 				2C67D9941B584FFA00C53652 /* SuicideGuideTableViewController.h */,
@@ -601,6 +604,7 @@
 				B83E76BC241D3D5A00837918 /* ButtonCell.swift in Sources */,
 				B8C6D91A244BBB4D003D1650 /* AppDefaults.swift in Sources */,
 				B8E38D532415C2F100729701 /* ImportantContactInformation.swift in Sources */,
+				9B84BC3A256252C500BAE49F /* SafetyPlanInteractor.swift in Sources */,
 				B8E38D552415C31F00729701 /* PersonalContact.swift in Sources */,
 				B84A89FF244D15EC004EC2B4 /* PersonalContactGateway.swift in Sources */,
 				B8650C772425DEA1009D09E2 /* DomainObject.swift in Sources */,

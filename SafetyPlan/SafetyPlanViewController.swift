@@ -15,7 +15,7 @@ protocol SafetyPlanRefreshDelegate: class {
 
 protocol SafetyPlanViewContorllerActions {
     #warning("Can we make this a non-optional?")
-    func editSafetyPlan(using: SafetyPlanItem.ItemType?)
+    func editSafetyPlan(using: SafetyPlanItem.ItemType?, from: SafetyPlanViewController)
 }
 
 class SafetyPlanViewController: BaseViewController {
@@ -106,7 +106,7 @@ class SafetyPlanViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
-    var delegate: SafetyPlanViewContorllerActions!
+    var delegate: SafetyPlanViewContorllerActions! = SafetyPlanInteractor()
     private var data: [RowData] = []
     private let safetyItemGateway = SafetyPlanItemGateway()
     private let personalContactGateway = PersonalContactGateway()
@@ -207,7 +207,7 @@ extension SafetyPlanViewController {
              .placesforDistraction,
              .contacts:
             
-            delegate.editSafetyPlan(using: rowType.relatedSafetyItemType)
+            delegate.editSafetyPlan(using: rowType.relatedSafetyItemType, from: self)
             
         case .other:
             let sb = UIStoryboard(name: "Plan", bundle: nil)
