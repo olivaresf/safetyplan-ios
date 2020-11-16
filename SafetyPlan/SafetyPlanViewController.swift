@@ -13,6 +13,11 @@ protocol SafetyPlanRefreshDelegate: class {
     func refreshData()
 }
 
+protocol SafetyPlanViewContorllerActions {
+    #warning("Can we make this a non-optional?")
+    func editSafetyPlan(using: SafetyPlanItem.ItemType?)
+}
+
 class SafetyPlanViewController: BaseViewController {
     
     struct RowData {
@@ -101,6 +106,7 @@ class SafetyPlanViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
+    var delegate: SafetyPlanViewContorllerActions!
     private var data: [RowData] = []
     private let safetyItemGateway = SafetyPlanItemGateway()
     private let personalContactGateway = PersonalContactGateway()
@@ -200,20 +206,8 @@ extension SafetyPlanViewController {
              .reasonsToLive,
              .placesforDistraction,
              .contacts:
-            let sb = UIStoryboard(name: "Plan", bundle: nil)
-            let editSafetyPlanItemNav = sb.instantiateViewController(withIdentifier: "EditSafetyPlanItemNav")
-            guard
-                let navController = editSafetyPlanItemNav as? UINavigationController,
-                let topViewController = navController.topViewController,
-                let editSafetyPlanItemsVC = topViewController as? EditSafetyPlanItemViewController,
-                let type = rowType.relatedSafetyItemType
-            else {
-                #warning("Do we report this to a user? Or should we force unwrap any of the conditions above?")
-                return
-            }
-            editSafetyPlanItemsVC.refreshDelegate = self
-            editSafetyPlanItemsVC.safetyPlanItemType = type
-            present(editSafetyPlanItemNav, animated: true)
+            
+            delegate.editSafetyPlan(using: rowType.relatedSafetyItemType)
             
         case .other:
             let sb = UIStoryboard(name: "Plan", bundle: nil)
